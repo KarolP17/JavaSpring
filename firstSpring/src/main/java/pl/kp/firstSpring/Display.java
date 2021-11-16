@@ -9,25 +9,25 @@ public class Display {
         int number = (random.nextInt(5) + 1);
         switch(number){
             case 1:
-                file = "P:\\Szkola\\java\\firstSpring\\src\\main\\cube1.png";
+                file = "src/main/resources/cube1.png";
                 break;
             case 2:
-                file = "P:\\Szkola\\java\\firstSpring\\src\\main\\cube2.png";
+                file = "src/main/resources/cube2.png";
                 break;
             case 3:
-                file = "P:\\Szkola\\java\\firstSpring\\src\\main\\cube3.png";
+                file = "src/main/resources/cube3.png";
                 break;
             case 4:
-                file = "P:\\Szkola\\java\\firstSpring\\src\\main\\cube4.png";
+                file = "src/main/resources/cube4.png";
                 break;
             case 5:
-                file = "P:\\Szkola\\java\\firstSpring\\src\\main\\cube5.png";
+                file = "src/main/resources/cube5.png";
                 break;
             case 6:
-                file = "P:\\Szkola\\java\\firstSpring\\src\\main\\cube6.png";
+                file = "src/main/resources/cube6.png";
                 break;
             default:
-                file = "P:\\Szkola\\java\\firstSpring\\src\\main\\cube3.png";
+                file = "src/main/resources/cube2.png";
                 break;
         }
         return file;
