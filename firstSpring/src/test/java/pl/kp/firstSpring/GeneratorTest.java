@@ -13,7 +13,7 @@ class GeneratorTest {
     @Test
     void NumberIsInRange() throws FileNotFoundException{
         ConfigUtil configUtil = new ConfigUtil();
-        ConfigData configData = configUtil.loadData(new File("P:/Szkola/java/firstSpring/src/main/dane.txt"));
+        ConfigData configData = new ConfigData(20,1,300);
 
         Generator generator = new Generator();
         ArrayList<Integer> lista = generator.generate(configData);
