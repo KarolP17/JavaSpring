@@ -16,7 +16,6 @@ class GeneratorTest {
         ConfigData configData = configUtil.loadData(new File("P:/Szkola/java/firstSpring/src/main/dane.txt"));
 
         Generator generator = new Generator();
-        assertNotNull(generator);
         ArrayList<Integer> lista = generator.generate(configData);
         for (int i : lista) {
             assertTrue(((i >= configData.getStart() && i <= configData.getEnd())));
