@@ -1,9 +1,14 @@
 package pl.kp.firstSpring;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import pl.kp.firstSpring.controller.FirstController;
+
 import java.sql.Time;
 import java.util.*;
 
 public class Generator {
+    private static final Logger logger = LogManager.getLogger(Generator.class);
     public ArrayList<Integer> generate(ConfigData configData){
         Random random = new Random();
         ArrayList<Integer> lista = new ArrayList<>();
@@ -22,15 +27,16 @@ public class Generator {
 
         while (System.currentTimeMillis() <= time + (timeEnd * 60000)) {
             int liczba = random.nextInt(end - start + 1) + start;
-            System.out.println(liczba);
+            logger.info(liczba);
             tab[liczba - start] += 1;
         }
         for (int i = 0; i < tab.length; i++) {
-            System.out.println("Liczba: " + (i+start) + " Ilość wystąpień: " + tab[i]);
+            logger.info("Liczba: " + (i+start) + " Ilość wystąpień: " + tab[i]);
         }
-        System.out.println("Generation completed");
+        logger.info("Generation completed");
         return tab;
     }
 
 
 }
+
